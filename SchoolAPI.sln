@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolAPI", "SchoolAPI\SchoolAPI.csproj", "{1B1E73A6-1D4F-4C44-A151-D0D0DE045C9A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolAPI", "SchoolAPI\SchoolAPI.csproj", "{1B1E73A6-1D4F-4C44-A151-D0D0DE045C9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Contracts\Contracts.csproj", "{B02FA8E5-245E-468B-9764-ECC8EC8A9B12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggerService", "LoggerService\LoggerService.csproj", "{E3D91E60-580D-475E-A73F-3A5A2F244F45}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{1B1E73A6-1D4F-4C44-A151-D0D0DE045C9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B1E73A6-1D4F-4C44-A151-D0D0DE045C9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B1E73A6-1D4F-4C44-A151-D0D0DE045C9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B02FA8E5-245E-468B-9764-ECC8EC8A9B12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B02FA8E5-245E-468B-9764-ECC8EC8A9B12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B02FA8E5-245E-468B-9764-ECC8EC8A9B12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B02FA8E5-245E-468B-9764-ECC8EC8A9B12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3D91E60-580D-475E-A73F-3A5A2F244F45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3D91E60-580D-475E-A73F-3A5A2F244F45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3D91E60-580D-475E-A73F-3A5A2F244F45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3D91E60-580D-475E-A73F-3A5A2F244F45}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
