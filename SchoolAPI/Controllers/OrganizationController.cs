@@ -25,43 +25,20 @@ namespace SchoolAPI.Controllers
         [HttpGet]
         public IActionResult GetOrganizations()
         {
-            try
-            {
-                var organizations = _repository.Organization.GetAllOrganizations(trackChanges: false);
-                /*return Ok(organizations);*/
-                var organizationDto = _mapper.Map<IEnumerable<OrganizationDto>>(organizations);
-                return Ok(organizationDto);
+            var organizations = _repository.Organization.GetAllOrganizations(trackChanges: false);
 
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError($"Something went wrong in the {nameof(GetOrganizations)} action {ex}");
-                return StatusCode(500, "Internal server error");
-            }
+            var organizationDto = _mapper.Map<IEnumerable<OrganizationDto>>(organizations);
+            //uncomment the code below to test the global exception handling
+            //throw new Exception("Exception");
+            return Ok(organizationDto);
         }
+
         [HttpGet("{id}")]
-        public IActionResult GetOrganizationy(Guid id)
+        public IActionResult GetOrganization(Guid id)
         {
-            try
-            {
-                var organization = _repository.Organization.GetOrganization(id, trackChanges: false); if (organization == null)
-                {
-                    _logger.LogInfo($"Organization with id: {id} doesn't exist in the database.");
-                    return NotFound();
-                }
-                else
-                {
-                    var organizationDto = _mapper.Map<OrganizationDto>(organization);
-                    return Ok(organizationDto);
-                }
-
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError($"Something went wrong in the {nameof(GetOrganizations)} action {ex}");
-                return StatusCode(500, "Internal server error");
-            }
-
+            var organization = _repository.Organization.GetOrganization(id, trackChanges: false);
+            var organizationDto = _mapper.Map<OrganizationDto>(organization);
+            return Ok(organizationDto);
         }
     }
 }
