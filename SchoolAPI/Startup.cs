@@ -42,6 +42,7 @@ namespace SchoolAPI
             {
                 options.SuppressModelStateInvalidFilter = true;
             });
+            services.ConfigureSwagger();
             services.AddControllers();
         }
 
@@ -56,6 +57,10 @@ namespace SchoolAPI
             {
                 app.UseHsts();
             }
+            app.UseSwagger();
+            app.UseSwaggerUI(s => {
+                s.SwaggerEndpoint("/swagger/v1/swagger.json", "School API v1");
+            });
 
             app.ConfigureExceptionHandler(logger);
             app.UseHttpsRedirection();
