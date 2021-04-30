@@ -158,3 +158,5 @@ Error Number:207,State:1,Class:16
    at SchoolAPI.Controllers.UserController.GetUsers() in C:\Users\ASUS\source\repos\SchoolAPI\SchoolAPI\Controllers\UserController.cs:line 34
 ClientConnectionId:1789eb4f-675f-41b3-892d-66703a2b2d33
 Error Number:207,State:1,Class:16
+2021-04-29 22:48:43.3705 ERROR Invalid model state for the OrganizationForCreationDto object
+2021-04-29 23:52:00.6829 ERROR Invalid model state for the UserForCreationDto object

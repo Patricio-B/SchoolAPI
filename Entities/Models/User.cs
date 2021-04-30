@@ -16,8 +16,8 @@ namespace Entities.Models
         [MinLength(5, ErrorMessage = "Minimum length for the Name is 5 characters.")]
         public string UserName { get; set; }
 
-        [ForeignKey(nameof(Organization))]
+        /*[ForeignKey(nameof(Organization))]
         public Guid OrganizationId { get; set; }
-        public Organization Organization { get; set; }
+        public Organization Organization { get; set; }*/
     }
 }
