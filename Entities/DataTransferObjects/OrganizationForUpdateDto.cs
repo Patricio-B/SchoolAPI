@@ -1,22 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+using System.Text;
 
-namespace Entities.Models
+namespace Entities.DataTransferObjects
 {
-    public class Organization
+    public class OrganizationForUpdateDto
     {
-        [Column("OrganizationId")]
-        public Guid Id { get; set; }
-
         [Required(ErrorMessage = "Organization name is a required field.")]
         [MaxLength(60, ErrorMessage = "Maximum length for the Name is 60 characters.")]
-        [MinLength(5, ErrorMessage = "Minimum length for the Name is 5 characters.")]
+        [MinLength(5, ErrorMessage = "Minimum length for the Name is 60 characters.")]
         public string OrgName { get; set; }
+
+        [Required(ErrorMessage = "Org Name is a required field.")]
         public string City { get; set; }
+
+        [Required(ErrorMessage = "Country is a required field.")]
         public string Country { get; set; }
-        public ICollection<User> Users { get; set; }
     }
 }
