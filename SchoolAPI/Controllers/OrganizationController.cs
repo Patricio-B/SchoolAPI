@@ -31,7 +31,7 @@ namespace SchoolAPI.Controllers
 
             var organizationDto = _mapper.Map<IEnumerable<OrganizationDto>>(organizations);
             //uncomment the code below to test the global exception handling
-            //throw new Exception("Exception");
+            throw new Exception("Exception");
             return Ok(organizationDto);
         }
 

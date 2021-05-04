@@ -27,7 +27,7 @@ namespace SchoolAPI.Migrations
                 {
                     UserId = table.Column<Guid>(nullable: false),
                     UserName = table.Column<string>(maxLength: 30, nullable: false),
-                    OrganizationId = table.Column<Guid>(nullable: true)
+                    OrganizationId = table.Column<Guid>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -37,27 +37,33 @@ namespace SchoolAPI.Migrations
                         column: x => x.OrganizationId,
                         principalTable: "Organizations",
                         principalColumn: "OrganizationId",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.InsertData(
                 table: "Organizations",
                 columns: new[] { "OrganizationId", "City", "Country", "OrgName" },
-                values: new object[,]
-                {
-                    { new Guid("c9d4c053-49b6-410c-bc78-2d54a9991870"), "Newark", "USA", "njit" },
-                    { new Guid("3d490a70-94ce-4d15-9494-5248280c2ce3"), "Newark", "USA", "rutgers" }
-                });
+                values: new object[] { new Guid("c9d4c053-49b6-410c-bc78-2d54a9991870"), "Newark", "USA", "njit" });
+
+            migrationBuilder.InsertData(
+                table: "Organizations",
+                columns: new[] { "OrganizationId", "City", "Country", "OrgName" },
+                values: new object[] { new Guid("3d490a70-94ce-4d15-9494-5248280c2ce3"), "Newark", "USA", "rutgers" });
 
             migrationBuilder.InsertData(
                 table: "Users",
                 columns: new[] { "UserId", "OrganizationId", "UserName" },
-                values: new object[,]
-                {
-                    { new Guid("80abbca8-664d-4b20-b5de-024705497d4a"), null, "hb" },
-                    { new Guid("86dba8c0-d178-41e7-938c-ed49778fb52a"), null, "hb242" },
-                    { new Guid("021ca3c1-0deb-4afd-ae94-2159a8479811"), null, "hpb29" }
-                });
+                values: new object[] { new Guid("80abbca8-664d-4b20-b5de-024705497d4a"), new Guid("c9d4c053-49b6-410c-bc78-2d54a9991870"), "hb" });
+
+            migrationBuilder.InsertData(
+                table: "Users",
+                columns: new[] { "UserId", "OrganizationId", "UserName" },
+                values: new object[] { new Guid("86dba8c0-d178-41e7-938c-ed49778fb52a"), new Guid("c9d4c053-49b6-410c-bc78-2d54a9991870"), "hb242" });
+
+            migrationBuilder.InsertData(
+                table: "Users",
+                columns: new[] { "UserId", "OrganizationId", "UserName" },
+                values: new object[] { new Guid("021ca3c1-0deb-4afd-ae94-2159a8479811"), new Guid("3d490a70-94ce-4d15-9494-5248280c2ce3"), "hpb29" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Users_OrganizationId",
