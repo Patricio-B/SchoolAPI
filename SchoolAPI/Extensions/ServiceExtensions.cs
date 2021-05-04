@@ -46,7 +46,10 @@ namespace SchoolAPI.Extensions
                     Version = "v1"
                 });
             });
-
         }
-    }
+
+        public static IMvcBuilder AddCustomCSVFormatter(this IMvcBuilder builder) =>
+            builder.AddMvcOptions(config => config.OutputFormatters.Add(new CsvOutputFormatter()));
+
+    };
 }
