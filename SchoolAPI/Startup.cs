@@ -45,11 +45,18 @@ namespace SchoolAPI
             }).AddXmlDataContractSerializerFormatters()
  .AddCustomCSVFormatter();
 
+            services.AddScoped<IAuthenticationManager, AuthenticationManager>();
+
             services.Configure<Microsoft.AspNetCore.Mvc.ApiBehaviorOptions>(options =>
             {
                 options.SuppressModelStateInvalidFilter = true;
             });
-            services.ConfigureSwagger();
+            
+            services.AddAuthentication(); 
+           
+            services.ConfigureSwagger(); 
+            services.ConfigureIdentity();
+            services.ConfigureJWT(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -80,7 +87,7 @@ namespace SchoolAPI
             });
 
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {

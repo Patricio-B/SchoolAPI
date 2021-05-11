@@ -5,6 +5,9 @@ using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SchoolAPI.Controllers
 {
@@ -24,8 +27,8 @@ namespace SchoolAPI.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet(Name = "getAllOrganizations")]
-        public IActionResult GetOrganizations()
+        [HttpGet(Name = "getAllOrganizations"), Authorize(Roles = "Manager")]
+        public async Task<IActionResult> GetOrganizations()
         {
             var organizations = _repository.Organization.GetAllOrganizations(trackChanges: false);
 

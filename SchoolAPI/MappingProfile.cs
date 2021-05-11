@@ -20,6 +20,7 @@ namespace SchoolAPI
                     opt => opt.MapFrom(x => x.UserName));
             CreateMap<UserForCreationDto, User>();
             CreateMap<UserForUpdateDto, User>();
+            CreateMap<StudentForRegistrationDto, Student>();
 
 
         }
