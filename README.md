@@ -1,5 +1,8 @@
 # SchoolAPI
 
-Module 1: https://docs.google.com/document/d/1-8I9NJwnN4SwV03QLGPkGnU5oTVQjCyCGelFwQc8NBg/edit?usp=sharing
 
-Module 2: https://docs.google.com/document/d/1HQPf3YCk8wY6ZIkRG1z4s9iy0WH2pTcRf13Tav-CWdY/edit?usp=sharing
+Getting organizations:
+![Screenshot 2021-04-29 162710](https://user-images.githubusercontent.com/20877734/118058409-2a1f7580-b35c-11eb-99f9-83c49665a320.png)
+
+Getting Users:
+![Screenshot 2021-04-29 165710](https://user-images.githubusercontent.com/20877734/118058440-386d9180-b35c-11eb-9b54-180cddc337ed.png)
