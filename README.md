@@ -1,5 +1,5 @@
 # SchoolAPI
 
-Module 1: https://docs.google.com/document/d/1-8I9NJwnN4SwV03QLGPkGnU5oTVQjCyCGelFwQc8NBg/edit?usp=sharing
-
-Module 2: https://docs.google.com/document/d/1HQPf3YCk8wY6ZIkRG1z4s9iy0WH2pTcRf13Tav-CWdY/edit?usp=sharing
+Exception thrown in organization controller:
+![image](https://user-images.githubusercontent.com/20877734/118063252-b6369a80-b366-11eb-8c56-124d4701ebed.png)
+![image](https://user-images.githubusercontent.com/20877734/118063360-f269fb00-b366-11eb-9ab4-db824014462d.png)
