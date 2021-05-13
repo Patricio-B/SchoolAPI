@@ -1,5 +1,3 @@
 # SchoolAPI
 
-Module 1: https://docs.google.com/document/d/1-8I9NJwnN4SwV03QLGPkGnU5oTVQjCyCGelFwQc8NBg/edit?usp=sharing
-
-Module 2: https://docs.google.com/document/d/1HQPf3YCk8wY6ZIkRG1z4s9iy0WH2pTcRf13Tav-CWdY/edit?usp=sharing
+![image](https://user-images.githubusercontent.com/20877734/118062793-bda97400-b365-11eb-9e36-9c8132990712.png)
